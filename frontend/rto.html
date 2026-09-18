@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SureGuard | RTO / Vehicles</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+  </head>
+  <body>
+    <div class="app-layout">
+      <aside class="sidebar">
+        <div class="brand">SureGuard</div>
+        <nav>
+          <a href="dashboard.html">🏠 Dashboard</a>
+          <a class="active" href="rto.html">🚗 RTO / Vehicles</a>
+          <a href="contacts.html">👥 Contacts</a>
+          <a href="documents.html">📄 Documents</a>
+          <a href="payments.html">💳 Payments</a>
+          <a href="agents.html">👨‍💼 Agents</a>
+          <a href="policies.html">📋 Policies</a>
+          <a href="settings.html">⚙️ Settings</a>
+          <a href="index.html" onclick="localStorage.removeItem('insurance-token')">🚪 Sign Out</a>
+        </nav>
+      </aside>
+      <main class="main-content">
+        <header class="topbar">
+          <h1>RTO / Vehicle Management</h1>
+          <div class="topbar-user">Welcome, <span id="userName">User</span></div>
+        </header>
+        <section class="panel">
+          <div class="panel-head">
+            <h2>Vehicle Records</h2>
+            <button class="btn btn-primary" onclick="document.getElementById('vehicleForm').style.display='block'">Add Vehicle</button>
+          </div>
+          <form id="vehicleForm" class="form-grid" style="display:none;">
+            <input id="owner_name" placeholder="Owner Name" required />
+            <input id="vehicle_number" placeholder="Vehicle Number" required />
+            <select id="vehicle_type"><option value="car">Car</option><option value="bike">Bike</option><option value="truck">Truck</option></select>
+            <input id="make" placeholder="Make" />
+            <input id="model" placeholder="Model" />
+            <input id="year" type="number" placeholder="Year" />
+            <input id="engine_number" placeholder="Engine Number" />
+            <input id="chassis_number" placeholder="Chassis Number" />
+            <input id="rto_office" placeholder="RTO Office" />
+            <input id="registration_date" type="date" />
+            <input id="fitness_expiry" type="date" />
+            <input id="insurance_expiry" type="date" />
+            <button class="btn btn-primary" type="submit">Save Vehicle</button>
+          </form>
+          <div class="toolbar">
+            <input id="searchVehicle" placeholder="Search by vehicle number" />
+            <select id="filterType"><option value="">All Types</option><option value="car">Car</option><option value="bike">Bike</option><option value="truck">Truck</option></select>
+          </div>
+          <table class="data-table">
+            <thead><tr><th>Owner</th><th>Vehicle No.</th><th>Type</th><th>RTO Office</th><th>Insurance Expiry</th><th>Actions</th></tr></thead>
+            <tbody id="vehicleTableBody"></tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/rto.js"></script>
+  </body>
+</html>

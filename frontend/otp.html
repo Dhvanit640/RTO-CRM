@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insurance App | OTP Verification</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="auth-shell">
+      <div class="auth-card">
+        <div class="brand-block">
+          <div class="brand-icon">✉️</div>
+          <h1>Verify your email</h1>
+          <p>Enter the 6-digit code sent to your inbox.</p>
+        </div>
+
+        <form id="otpForm" class="auth-form">
+          <h2>OTP Verification</h2>
+          <div id="message" class="message" aria-live="polite"></div>
+
+          <label>
+            OTP
+            <input type="text" id="otp" maxlength="6" inputmode="numeric" placeholder="Enter OTP" required />
+          </label>
+
+          <button type="submit" class="btn btn-primary">Verify OTP</button>
+          <p class="helper-text">Use the master test code: 9999</p>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insurance App | Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="auth-shell">
+      <div class="auth-card">
+        <div class="brand-block">
+          <div class="brand-icon">🔐</div>
+          <h1>Create your account</h1>
+          <p>Join thousands of customers managing policies in one place.</p>
+        </div>
+
+        <form id="registerForm" class="auth-form">
+          <h2>Register</h2>
+          <div id="message" class="message" aria-live="polite"></div>
+
+          <label>
+            Full Name
+            <input type="text" id="name" placeholder="Jane Doe" required />
+          </label>
+
+          <label>
+            Email
+            <input type="email" id="email" placeholder="you@example.com" required />
+          </label>
+
+          <label>
+            Password
+            <span class="password-field">
+              <input type="password" id="password" placeholder="Create password" required />
+              <button type="button" class="password-toggle" aria-label="Show password" aria-pressed="false">&#128065;</button>
+            </span>
+          </label>
+
+          <label>
+            Confirm Password
+            <span class="password-field">
+              <input type="password" id="confirmPassword" placeholder="Confirm password" required />
+              <button type="button" class="password-toggle" aria-label="Show password" aria-pressed="false">&#128065;</button>
+            </span>
+          </label>
+
+          <button type="submit" class="btn btn-primary">Send OTP</button>
+          <p class="helper-text">
+            Already have an account?
+            <a href="index.html">Login</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

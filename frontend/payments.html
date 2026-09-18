@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SureGuard | Payments</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+  </head>
+  <body>
+    <div class="app-layout">
+      <aside class="sidebar">
+        <div class="brand">SureGuard</div>
+        <nav>
+          <a href="dashboard.html">🏠 Dashboard</a>
+          <a href="rto.html">🚗 RTO / Vehicles</a>
+          <a href="contacts.html">👥 Contacts</a>
+          <a href="documents.html">📄 Documents</a>
+          <a class="active" href="payments.html">💳 Payments</a>
+          <a href="agents.html">👨‍💼 Agents</a>
+          <a href="policies.html">📋 Policies</a>
+          <a href="settings.html">⚙️ Settings</a>
+          <a href="index.html" onclick="localStorage.removeItem('insurance-token')">🚪 Sign Out</a>
+        </nav>
+      </aside>
+      <main class="main-content">
+        <header class="topbar">
+          <h1>Payments</h1>
+          <div class="topbar-user">Welcome, <span id="userName">User</span></div>
+        </header>
+        <section class="panel">
+          <div class="stats-row" id="paymentsSummary"></div>
+          <form id="paymentForm" class="form-grid">
+            <input id="contact_id" placeholder="Contact ID" />
+            <input id="policy_id" placeholder="Policy ID" />
+            <input id="policy_type" placeholder="Policy Type" />
+            <input id="policy_number" placeholder="Policy Number" />
+            <input id="payment_date" type="date" />
+            <input id="amount" type="number" placeholder="Amount" />
+            <select id="payment_mode"><option value="cash">Cash</option><option value="cheque">Cheque</option><option value="online">Online</option><option value="upi">UPI</option><option value="bank_transfer">Bank Transfer</option></select>
+            <select id="payment_status"><option value="paid">Paid</option><option value="pending">Pending</option><option value="failed">Failed</option></select>
+            <input id="transaction_id" placeholder="Transaction ID" />
+            <input id="receipt_number" placeholder="Receipt Number" />
+            <textarea id="notes" placeholder="Notes"></textarea>
+            <button class="btn btn-primary" type="submit">Save Payment</button>
+          </form>
+          <table class="data-table">
+            <thead><tr><th>Customer</th><th>Policy</th><th>Amount</th><th>Status</th><th>Actions</th></tr></thead>
+            <tbody id="paymentTableBody"></tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/payments.js"></script>
+  </body>
+</html>

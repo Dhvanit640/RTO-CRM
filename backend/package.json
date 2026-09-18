@@ -1,0 +1,23 @@
+{
+  "name": "insurance-policy-app",
+  "version": "1.0.0",
+  "description": "Insurance policy web application with authentication and policy dashboard",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.6",
+    "csv-parser": "^3.2.1",
+    "dotenv": "^16.4.0",
+    "exceljs": "^4.4.0",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.2.0",
+    "mysql2": "^3.2.5",
+    "nodemailer": "^7.0.1",
+    "pdfkit": "^0.19.1"
+  }
+}

@@ -1,0 +1,13 @@
+# Environment secrets
+.env
+
+# Dependencies and generated files
+backend/node_modules/
+backend/uploads/contacts/*
+backend/uploads/documents/*
+*.log
+
+# Local editor/system files
+.vscode/
+.DS_Store
+Thumbs.db

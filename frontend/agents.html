@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SureGuard | Agents</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+  </head>
+  <body>
+    <div class="app-layout">
+      <aside class="sidebar">
+        <div class="brand">SureGuard</div>
+        <nav>
+          <a href="dashboard.html">🏠 Dashboard</a>
+          <a href="rto.html">🚗 RTO / Vehicles</a>
+          <a href="contacts.html">👥 Contacts</a>
+          <a href="documents.html">📄 Documents</a>
+          <a href="payments.html">💳 Payments</a>
+          <a class="active" href="agents.html">👨‍💼 Agents</a>
+          <a href="policies.html">📋 Policies</a>
+          <a href="settings.html">⚙️ Settings</a>
+          <a href="index.html" onclick="localStorage.removeItem('insurance-token')">🚪 Sign Out</a>
+        </nav>
+      </aside>
+      <main class="main-content">
+        <header class="topbar">
+          <h1>Agents</h1>
+          <div class="topbar-user">Welcome, <span id="userName">User</span></div>
+        </header>
+        <section class="panel">
+          <form id="agentForm" class="form-grid">
+            <input id="agent_name" placeholder="Agent Name" required />
+            <input id="email" type="email" placeholder="Email" />
+            <input id="phone" placeholder="Phone" />
+            <input id="agent_code" placeholder="Agent Code" />
+            <input id="city" placeholder="City" />
+            <input id="joining_date" type="date" />
+            <select id="status"><option value="active">Active</option><option value="inactive">Inactive</option></select>
+            <input id="commission_percent" type="number" placeholder="Commission %" />
+            <textarea id="address" placeholder="Address"></textarea>
+            <button class="btn btn-primary" type="submit">Save Agent</button>
+          </form>
+          <div id="leaderboard" class="stats-row"></div>
+          <table class="data-table">
+            <thead><tr><th>Agent</th><th>Code</th><th>Email</th><th>Status</th><th>Actions</th></tr></thead>
+            <tbody id="agentTableBody"></tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/agents.js"></script>
+  </body>
+</html>

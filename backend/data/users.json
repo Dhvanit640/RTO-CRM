@@ -1,0 +1,12 @@
+[
+  {
+    "id": "1784626482886",
+    "name": "Dhvanit",
+    "email": "pdhvanit81@gmail.com",
+    "password": "$2a$10$f1479tUaVFXkQ.Xk0QGk.uG.rv4JMc8k0NW8WZG4ozXMBjrLUeRg.",
+    "active": false,
+    "otp": "153816",
+    "otpExpiresAt": 1784626782770,
+    "createdAt": "2026-07-21T09:34:42.890Z"
+  }
+]

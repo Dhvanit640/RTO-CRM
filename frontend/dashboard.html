@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SureGuard RTO CRM | Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body class="crm-page">
+    <div class="app-layout">
+      <aside class="sidebar"><div class="brand"><span class="brand-mark">SG</span><span>SureGuard RTO</span></div><div class="sidebar-search"><span>⌕</span><input placeholder="Search menu..." aria-label="Search menu" /></div><nav>
+        <a class="active" href="dashboard.html">⌂ Dashboard</a>
+        <a href="contacts.html">♙ RTO / Customers</a>
+        <a href="policies.html">▣ Vehicles &amp; Policies</a>
+        <a href="followups.html">◷ Follow-ups &amp; Renewals</a>
+        <a class="signout" href="index.html" onclick="localStorage.removeItem('insurance-token')">↪ Sign out</a>
+      </nav></aside>
+      <main class="main-content">
+        <header class="crm-topbar"><div class="global-search"><span>⌕</span><input id="dashboardSearch" placeholder="Search customers, vehicles or policies..." /></div><div class="topbar-actions"><button class="header-icon" aria-label="Settings">⚙</button><span class="topbar-user"><span class="avatar">DU</span> Demo User <span>⌄</span></span></div></header>
+        <section class="crm-heading"><div><p class="eyebrow">RTO OPERATIONS</p><h1>Good morning, Demo User</h1><p>Here is the current health of your RTO office.</p></div><a class="btn btn-primary" href="contacts.html">＋ Add Customer</a></section>
+        <section class="kpi-grid" id="dashboardKpis"></section>
+        <section class="crm-grid"><article class="crm-panel"><div class="panel-heading"><h2>Today's Follow-ups</h2><a href="followups.html">View all</a></div><div id="todayFollowups" class="mini-list"></div></article><article class="crm-panel"><div class="panel-heading"><h2>Upcoming Policy Expiry</h2><a href="policies.html">View policies</a></div><div id="upcomingExpiry" class="mini-list"></div></article></section>
+        <section class="crm-grid"><article class="crm-panel"><div class="panel-heading"><h2>Recent RTO Applications</h2><a href="contacts.html">Open customers</a></div><div id="recentApplications" class="mini-list"></div></article><article class="crm-panel"><div class="panel-heading"><h2>Recent Customers</h2><a href="contacts.html">Customer list</a></div><div id="recentCustomers" class="mini-list"></div></article></section>
+        <section class="crm-grid"><article class="crm-panel chart-box"><div class="panel-heading"><h2>Monthly RTO Applications</h2><span class="badge teal">This year</span></div><div class="bars" id="applicationBars"></div><div class="bar-labels"><span>Jan</span><span>Mar</span><span>May</span><span>Jul</span><span>Sep</span><span>Nov</span></div></article><article class="crm-panel chart-box"><div class="panel-heading"><h2>Service-wise Applications</h2><span class="badge blue">By service</span></div><div class="progress-list" id="serviceProgress"></div></article></section>
+        <section class="crm-grid"><article class="crm-panel"><div class="panel-heading"><h2>Pending Documents</h2><a href="contacts.html">Review</a></div><div id="pendingDocuments" class="mini-list"></div></article><article class="crm-panel"><div class="panel-heading"><h2>Recent Payments</h2><a href="policies.html">Open billing</a></div><div id="recentPayments" class="mini-list"></div></article></section>
+      </main>
+    </div>
+    <script src="js/main.js"></script><script src="js/dashboard.js"></script>
+  </body>
+</html>

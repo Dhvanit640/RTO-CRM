@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SureGuard | Settings</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+  </head>
+  <body>
+    <div class="app-layout">
+      <aside class="sidebar">
+        <div class="brand">SureGuard</div>
+        <nav>
+          <a href="dashboard.html">🏠 Dashboard</a>
+          <a href="rto.html">🚗 RTO / Vehicles</a>
+          <a href="contacts.html">👥 Contacts</a>
+          <a href="documents.html">📄 Documents</a>
+          <a href="payments.html">💳 Payments</a>
+          <a href="agents.html">👨‍💼 Agents</a>
+          <a href="policies.html">📋 Policies</a>
+          <a class="active" href="settings.html">⚙️ Settings</a>
+          <a href="index.html" onclick="localStorage.removeItem('insurance-token')">🚪 Sign Out</a>
+        </nav>
+      </aside>
+      <main class="main-content">
+        <header class="topbar">
+          <h1>Settings</h1>
+          <div class="topbar-user">Welcome, <span id="userName">User</span></div>
+        </header>
+        <section class="panel">
+          <h2>Company Details</h2>
+          <form class="form-grid">
+            <input placeholder="Company Name" value="SureGuard Insurance" />
+            <input placeholder="Address" value="123 Blue Avenue, Mumbai" />
+            <input placeholder="Contact Number" value="+91 98765 43210" />
+            <input placeholder="Email" value="support@sureguard.com" />
+            <input placeholder="Website" value="www.sureguard.com" />
+            <button class="btn btn-primary" type="submit">Save Settings</button>
+          </form>
+        </section>
+      </main>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

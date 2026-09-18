@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SureGuard | Documents</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+  </head>
+  <body>
+    <div class="app-layout">
+      <aside class="sidebar">
+        <div class="brand">SureGuard</div>
+        <nav>
+          <a href="dashboard.html">🏠 Dashboard</a>
+          <a href="rto.html">🚗 RTO / Vehicles</a>
+          <a href="contacts.html">👥 Contacts</a>
+          <a class="active" href="documents.html">📄 Documents</a>
+          <a href="payments.html">💳 Payments</a>
+          <a href="agents.html">👨‍💼 Agents</a>
+          <a href="policies.html">📋 Policies</a>
+          <a href="settings.html">⚙️ Settings</a>
+          <a href="index.html" onclick="localStorage.removeItem('insurance-token')">🚪 Sign Out</a>
+        </nav>
+      </aside>
+      <main class="main-content">
+        <header class="topbar">
+          <h1>Document Management</h1>
+          <div class="topbar-user">Welcome, <span id="userName">User</span></div>
+        </header>
+        <section class="panel">
+          <form id="documentForm" class="form-grid">
+            <input id="contact_id" placeholder="Contact ID" />
+            <input id="policy_id" placeholder="Policy ID" />
+            <select id="document_type"><option value="pan_card">PAN Card</option><option value="aadhar_card">Aadhar Card</option><option value="rc_book">RC Book</option><option value="insurance_policy">Insurance Policy</option><option value="driving_license">Driving License</option><option value="other">Other</option></select>
+            <input id="document_number" placeholder="Document Number" />
+            <input id="expiry_date" type="date" />
+            <input id="file" type="file" />
+            <textarea id="notes" placeholder="Notes"></textarea>
+            <button class="btn btn-primary" type="submit">Upload Document</button>
+          </form>
+          <input id="documentSearch" placeholder="Search by customer or document type" />
+          <div id="documentGrid" class="card-grid"></div>
+        </section>
+      </main>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/documents.js"></script>
+  </body>
+</html>
