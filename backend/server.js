@@ -38,6 +38,6 @@ app.use('/api/agents', require('./routes/agents'));
 app.use('/api/policies', require('./routes/policies'));
 app.use('/api/dashboard', require('./routes/dashboard'));
 
-app.listen(PORT, () => {
-  console.log(`Insurance app running on http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Insurance app running on port ${PORT}`);
 });

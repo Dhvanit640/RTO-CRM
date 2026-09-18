@@ -49,3 +49,11 @@ A full-stack insurance policy web app built with Node.js, Express, vanilla HTML/
 ## Notes
 - The OTP flow currently uses the hardcoded test code 9999 for local testing.
 - The frontend is designed to be served from Apache under the XAMPP htdocs path.
+
+## Replit Deployment
+1. Open the import link: https://replit.com/github/Dhvanit640/RTO-CRM
+2. In Replit Secrets, add `DB_HOST`, `DB_PORT`, `DB_USER`, `DB_PASSWORD`, `DB_NAME`, and `JWT_SECRET` for a reachable MySQL database.
+3. Click Run. Replit will use `.replit` and start `backend/server.js` on the public Replit port.
+4. Share the generated `.replit.dev` or deployment URL.
+
+The project listens on `0.0.0.0` and uses Replit's `PORT` environment variable automatically. A hosted MySQL database is required because the application uses MySQL for customers, vehicles, policies, payments, and authentication.

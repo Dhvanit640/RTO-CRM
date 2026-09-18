@@ -1,0 +1,5 @@
+run = "cd backend && npm start"
+entrypoint = "backend/server.js"
+
+[deployment]
+run = ["sh", "-c", "cd backend && npm start"]
