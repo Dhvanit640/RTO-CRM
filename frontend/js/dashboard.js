@@ -1,4 +1,4 @@
-const crmApi = 'http://localhost:5000/api';
+const crmApi = '/api';
 const fallbackCustomers = [{ id: 1, full_name: 'John Doe', phone: '9876543211', city: 'Mumbai', occupation: 'New Registration' }, { id: 2, full_name: 'Sara Khan', phone: '9123456781', city: 'Delhi', occupation: 'Ownership Transfer' }];
 
 function escapeHtml(value) { return String(value ?? '').replace(/[&<>'"]/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' })[character]); }

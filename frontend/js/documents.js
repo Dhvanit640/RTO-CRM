@@ -1,4 +1,4 @@
-const apiBase = 'http://localhost:5000/api/documents';
+const apiBase = '/api/documents';
 function getToken() { return localStorage.getItem('insurance-token'); }
 function authGuard() { if (!getToken()) { window.location.href = 'index.html'; } }
 
@@ -12,8 +12,8 @@ async function loadDocuments() {
       <h3>${doc.document_type}</h3>
       <p>${doc.file_name}</p>
       <p>Customer: ${doc.full_name || 'N/A'}</p>
-      <a href="http://localhost:5000${doc.file_path}" target="_blank">Preview</a>
-      <a href="http://localhost:5000${doc.file_path}" download>Download</a>
+      <a href="${doc.file_path}" target="_blank">Preview</a>
+      <a href="${doc.file_path}" download>Download</a>
     </div>
   `).join('');
 }

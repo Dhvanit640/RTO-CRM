@@ -1,4 +1,4 @@
-const assetApi = 'http://localhost:5000/api';
+const assetApi = '/api';
 let vehicles = [];
 let assetPolicies = [];
 let assetTab = 'vehicles';

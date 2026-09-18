@@ -37,7 +37,7 @@ const policies = [
   },
 ];
 
-const apiBase = 'http://localhost:5000/api/auth';
+const apiBase = '/api/auth';
 
 function showMessage(element, message, type = 'success') {
   if (!element) return;

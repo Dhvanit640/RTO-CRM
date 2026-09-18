@@ -1,4 +1,4 @@
-const customerApi = 'http://localhost:5000/api/contacts';
+const customerApi = '/api/contacts';
 let customers = [];
 let editingCustomerId = null;
 const serviceDefaults = ['New Registration', 'Ownership Transfer', 'RC Renewal', 'Driving Licence', 'Address Change'];

@@ -1,4 +1,4 @@
-const apiBase = 'http://localhost:5000/api/agents';
+const apiBase = '/api/agents';
 function getToken() { return localStorage.getItem('insurance-token'); }
 function authGuard() { if (!getToken()) { window.location.href = 'index.html'; } }
 

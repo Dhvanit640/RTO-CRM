@@ -1,4 +1,4 @@
-const apiBase = 'http://localhost:5000/api/payments';
+const apiBase = '/api/payments';
 function getToken() { return localStorage.getItem('insurance-token'); }
 function authGuard() { if (!getToken()) { window.location.href = 'index.html'; } }
 
@@ -26,7 +26,7 @@ async function loadPayments() {
       <td>${p.policy_type || 'N/A'}</td>
       <td>₹${p.amount}</td>
       <td>${p.payment_status}</td>
-      <td><a href="http://localhost:5000/api/payments/receipt/${p.id}" target="_blank">Receipt</a></td>
+      <td><a href="/api/payments/receipt/${p.id}" target="_blank">Receipt</a></td>
     </tr>
   `).join('');
 }
